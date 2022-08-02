@@ -1,0 +1,16 @@
+name: 'Notify Teams Channel'
+author: 'Viraj Nemane'
+description: 'It will send message in MS Teams channel about job status'
+inputs:
+  webhook_uri:
+    description: 'Webhook URI for MS Teams Channel to receive message'
+    required: true
+  message:
+    description: "Message to be posted in MS Teams channel"
+    required: true
+runs:
+  using: 'docker'
+  image: 'Docker'
+  args:
+    - ${{ inputs.webhook_uri }}
+    - ${{ inputs.message }}
