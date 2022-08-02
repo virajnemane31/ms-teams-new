@@ -10,7 +10,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Docker'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.webhook_uri }}
     - ${{ inputs.message }}
